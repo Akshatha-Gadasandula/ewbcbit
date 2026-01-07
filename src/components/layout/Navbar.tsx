@@ -37,10 +37,8 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        scrolled
-          ? "bg-background/95 backdrop-blur-md shadow-soft py-3"
-          : "bg-transparent py-5"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/95 backdrop-blur-md shadow-soft",
+        scrolled ? "py-3" : "py-5"
       )}
     >
       <div className="container mx-auto px-4 lg:px-8">
@@ -53,16 +51,10 @@ const Navbar = () => {
               className="h-10 w-auto transition-transform group-hover:scale-105"
             />
             <div className="flex flex-col">
-              <span className={cn(
-                "font-heading font-semibold text-lg leading-tight transition-colors",
-                scrolled ? "text-foreground" : "text-primary-foreground"
-              )}>
+              <span className="font-heading font-semibold text-lg leading-tight text-foreground">
                 EWB CBIT
               </span>
-              <span className={cn(
-                "text-xs tracking-wide transition-colors",
-                scrolled ? "text-muted-foreground" : "text-primary-foreground/70"
-              )}>
+              <span className="text-xs tracking-wide text-muted-foreground">
                 Engineers Without Borders
               </span>
             </div>
@@ -77,18 +69,15 @@ const Navbar = () => {
                 className={cn(
                   "relative font-medium text-sm tracking-wide transition-colors duration-200",
                   location.pathname === link.path
-                    ? scrolled ? "text-primary" : "text-primary-foreground"
-                    : scrolled ? "text-foreground/70 hover:text-primary" : "text-primary-foreground/80 hover:text-primary-foreground"
+                    ? "text-primary"
+                    : "text-foreground/70 hover:text-primary"
                 )}
               >
                 {link.name}
                 {location.pathname === link.path && (
                   <motion.div
                     layoutId="navbar-indicator"
-                    className={cn(
-                      "absolute -bottom-1 left-0 right-0 h-0.5",
-                      scrolled ? "bg-primary" : "bg-primary-foreground"
-                    )}
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary"
                     transition={{ type: "spring", stiffness: 500, damping: 30 }}
                   />
                 )}
@@ -96,12 +85,7 @@ const Navbar = () => {
             ))}
             <Link
               to="/contact"
-              className={cn(
-                "px-5 py-2.5 rounded-lg font-medium text-sm transition-all duration-300",
-                scrolled
-                  ? "bg-primary text-primary-foreground hover:bg-primary/90"
-                  : "bg-primary-foreground/20 text-primary-foreground border border-primary-foreground/30 hover:bg-primary-foreground/30"
-              )}
+              className="px-5 py-2.5 rounded-lg font-medium text-sm transition-all duration-300 bg-primary text-primary-foreground hover:bg-primary/90"
             >
               Join Us
             </Link>
@@ -110,10 +94,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={cn(
-              "lg:hidden p-2 rounded-lg transition-colors",
-              scrolled ? "text-foreground" : "text-primary-foreground"
-            )}
+            className="lg:hidden p-2 rounded-lg transition-colors text-foreground"
             aria-label="Toggle menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -144,9 +125,7 @@ const Navbar = () => {
                         "block py-3 px-4 rounded-lg font-medium transition-colors",
                         location.pathname === link.path
                           ? "bg-primary/10 text-primary"
-                          : scrolled
-                            ? "text-foreground/70 hover:bg-muted"
-                            : "text-primary-foreground/80 hover:bg-primary-foreground/10"
+                          : "text-foreground/70 hover:bg-muted"
                       )}
                     >
                       {link.name}
