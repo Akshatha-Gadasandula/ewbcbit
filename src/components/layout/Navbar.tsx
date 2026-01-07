@@ -16,32 +16,15 @@ const navLinks = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   useEffect(() => {
     setIsOpen(false);
   }, [location]);
 
   return (
-    <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/95 backdrop-blur-md shadow-soft",
-        scrolled ? "py-3" : "py-5"
-      )}
-    >
-      <div className="container mx-auto px-4 lg:px-8">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md py-3">
+      <div className="max-w-6xl mx-auto px-4">
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
@@ -51,17 +34,17 @@ const Navbar = () => {
               className="h-10 w-auto transition-transform group-hover:scale-105"
             />
             <div className="flex flex-col">
-              <span className="font-heading font-semibold text-lg leading-tight text-foreground">
+              <span className="font-heading font-semibold text-lg leading-tight text-gray-900">
                 EWB CBIT
               </span>
-              <span className="text-xs tracking-wide text-muted-foreground">
+              <span className="text-xs tracking-wide text-gray-500">
                 Engineers Without Borders
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
@@ -70,7 +53,7 @@ const Navbar = () => {
                   "relative font-medium text-sm tracking-wide transition-colors duration-200",
                   location.pathname === link.path
                     ? "text-primary"
-                    : "text-foreground/70 hover:text-primary"
+                    : "text-gray-600 hover:text-primary"
                 )}
               >
                 {link.name}
@@ -85,7 +68,7 @@ const Navbar = () => {
             ))}
             <Link
               to="/contact"
-              className="px-5 py-2.5 rounded-lg font-medium text-sm transition-all duration-300 bg-primary text-primary-foreground hover:bg-primary/90"
+              className="px-4 py-2 rounded-lg font-medium text-sm bg-primary text-white hover:bg-primary/90 transition-colors"
             >
               Join Us
             </Link>
@@ -94,7 +77,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-lg transition-colors text-foreground"
+            className="lg:hidden p-2 rounded-lg text-gray-700"
             aria-label="Toggle menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -111,7 +94,7 @@ const Navbar = () => {
               transition={{ duration: 0.3 }}
               className="lg:hidden overflow-hidden"
             >
-              <div className="py-6 space-y-1">
+              <div className="py-4 space-y-1">
                 {navLinks.map((link, index) => (
                   <motion.div
                     key={link.path}
@@ -125,7 +108,7 @@ const Navbar = () => {
                         "block py-3 px-4 rounded-lg font-medium transition-colors",
                         location.pathname === link.path
                           ? "bg-primary/10 text-primary"
-                          : "text-foreground/70 hover:bg-muted"
+                          : "text-gray-600 hover:bg-gray-100"
                       )}
                     >
                       {link.name}
@@ -140,7 +123,7 @@ const Navbar = () => {
                 >
                   <Link
                     to="/contact"
-                    className="block w-full py-3 px-4 bg-primary text-primary-foreground rounded-lg font-medium text-center"
+                    className="block w-full py-3 px-4 bg-primary text-white rounded-lg font-medium text-center"
                   >
                     Join Us
                   </Link>
@@ -150,7 +133,7 @@ const Navbar = () => {
           )}
         </AnimatePresence>
       </div>
-    </motion.header>
+    </header>
   );
 };
 
