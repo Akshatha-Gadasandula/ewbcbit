@@ -117,20 +117,28 @@ const Footer = () => {
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-primary flex-shrink-0" />
                 <a
-                  href="mailto:ewb@cbit.ac.in"
+                  href="mailto:ewbcbit@gmail.com"
                   className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
                 >
-                  ewb@cbit.ac.in
+                  ewbcbit@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-primary flex-shrink-0" />
-                <a
-                  href="tel:+919876543210"
-                  className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
-                >
-                  +91 98765 43210
-                </a>
+                <div className="flex flex-col">
+                  <a
+                    href="tel:+919652809593"
+                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
+                  >
+                    +91 96528 09593
+                  </a>
+                  <a
+                    href="tel:+917416102178"
+                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
+                  >
+                    +91 74161 02178
+                  </a>
+                </div>
               </li>
             </ul>
           </div>

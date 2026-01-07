@@ -193,10 +193,10 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Email Us</h3>
                     <a
-                      href="mailto:ewb@cbit.ac.in"
+                      href="mailto:ewbcbit@gmail.com"
                       className="text-muted-foreground text-sm hover:text-primary transition-colors"
                     >
-                      ewb@cbit.ac.in
+                      ewbcbit@gmail.com
                     </a>
                   </div>
                 </div>
@@ -208,10 +208,16 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Call Us</h3>
                     <a
-                      href="tel:+919876543210"
-                      className="text-muted-foreground text-sm hover:text-primary transition-colors"
+                      href="tel:+919652809593"
+                      className="text-muted-foreground text-sm hover:text-primary transition-colors block"
                     >
-                      +91 98765 43210
+                      +91 96528 09593
+                    </a>
+                    <a
+                      href="tel:+917416102178"
+                      className="text-muted-foreground text-sm hover:text-primary transition-colors block"
+                    >
+                      +91 74161 02178
                     </a>
                   </div>
                 </div>
