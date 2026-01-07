@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import ewbLogo from "@/assets/ewb-logo.png";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -46,9 +47,11 @@ const Navbar = () => {
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center transition-transform group-hover:scale-105">
-              <span className="text-primary-foreground font-heading font-bold text-lg">E</span>
-            </div>
+            <img 
+              src={ewbLogo} 
+              alt="EWB CBIT Logo" 
+              className="h-10 w-auto transition-transform group-hover:scale-105"
+            />
             <div className="flex flex-col">
               <span className={cn(
                 "font-heading font-semibold text-lg leading-tight transition-colors",
