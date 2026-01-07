@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Layout from "@/components/layout/Layout";
-import { MapPin, Mail, Phone, Send, Instagram, Linkedin, Twitter, Facebook } from "lucide-react";
+import { MapPin, Mail, Phone, Send, Instagram, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -37,10 +37,8 @@ const Contact = () => {
   };
 
   const socialLinks = [
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Facebook, href: "#", label: "Facebook" },
+    { icon: Instagram, href: "https://www.instagram.com/ewbcbit", label: "Instagram" },
+    { icon: Linkedin, href: "https://in.linkedin.com/company/ewb-cbit", label: "LinkedIn" },
   ];
 
   return (
