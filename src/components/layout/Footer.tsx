@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import { MapPin, Mail, Phone, Instagram, Linkedin, Twitter, Facebook } from "lucide-react";
+import ewbLogo from "@/assets/ewb-logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -36,9 +36,11 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-heading font-bold text-xl">E</span>
-              </div>
+              <img 
+                src={ewbLogo} 
+                alt="EWB CBIT Logo" 
+                className="h-12 w-auto"
+              />
               <div className="flex flex-col">
                 <span className="font-heading font-semibold text-xl leading-tight">
                   EWB CBIT
