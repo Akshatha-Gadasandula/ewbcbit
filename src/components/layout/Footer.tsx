@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MapPin, Mail, Phone, Instagram, Linkedin, Twitter, Facebook } from "lucide-react";
+import { MapPin, Mail, Phone, Instagram, Linkedin } from "lucide-react";
 import ewbLogo from "@/assets/ewb-logo.png";
 
 const Footer = () => {
@@ -22,10 +22,8 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Facebook, href: "#", label: "Facebook" },
+    { icon: Instagram, href: "https://www.instagram.com/ewbcbit", label: "Instagram" },
+    { icon: Linkedin, href: "https://in.linkedin.com/company/ewb-cbit", label: "LinkedIn" },
   ];
 
   return (
