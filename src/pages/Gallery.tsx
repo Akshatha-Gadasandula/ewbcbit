@@ -12,14 +12,14 @@ import schoolProgram from "@/assets/gallery/school-program.png";
 import teamPhoto from "@/assets/gallery/team-photo.png";
 
 const galleryImages = [
-  { src: celebration, caption: "EWB Celebration Event", category: "Events" },
-  { src: classroomOutreach, caption: "Classroom Outreach Program", category: "Education" },
-  { src: schoolActivity, caption: "School Activity Session", category: "Education" },
-  { src: childrensAid, caption: "Hyderabad Children's Aid Society", category: "Community" },
-  { src: communityVisit, caption: "Community Outreach Visit", category: "Community" },
-  { src: ashramVisit, caption: "Vaidehi Ashram Visit", category: "Community" },
-  { src: schoolProgram, caption: "Government School Program", category: "Education" },
-  { src: teamPhoto, caption: "Team Photo with Students", category: "Events" },
+  celebration,
+  classroomOutreach,
+  schoolActivity,
+  childrensAid,
+  communityVisit,
+  ashramVisit,
+  schoolProgram,
+  teamPhoto,
 ];
 
 const Gallery = () => {
@@ -66,21 +66,12 @@ const Gallery = () => {
               >
                 <div className="relative rounded-2xl overflow-hidden">
                   <img
-                    src={image.src}
-                    alt={image.caption}
+                    src={image}
+                    alt="Gallery image"
                     className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/40 transition-colors duration-300" />
-                  <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-foreground/80 to-transparent
-                                opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="inline-block px-2 py-0.5 bg-primary/80 text-primary-foreground text-xs font-medium rounded mb-2">
-                      {image.category}
-                    </span>
-                    <p className="text-primary-foreground text-sm font-medium">
-                      {image.caption}
-                    </p>
-                  </div>
+                  <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-colors duration-300" />
                 </div>
               </motion.div>
             ))}
@@ -112,18 +103,10 @@ const Gallery = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={selectedImage.src}
-              alt={selectedImage.caption}
+              src={selectedImage}
+              alt="Gallery image"
               className="max-w-full max-h-[80vh] rounded-2xl object-contain"
             />
-            <div className="mt-4 text-center">
-              <span className="inline-block px-3 py-1 bg-primary/80 text-primary-foreground text-xs font-medium rounded mb-2">
-                {selectedImage.category}
-              </span>
-              <p className="text-primary-foreground text-lg font-medium">
-                {selectedImage.caption}
-              </p>
-            </div>
           </motion.div>
         </motion.div>
       )}
