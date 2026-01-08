@@ -3,45 +3,37 @@ import Layout from "@/components/layout/Layout";
 import { User } from "lucide-react";
 
 const coreCommittee = [
-  { name: "Arjun Reddy", role: "President", department: "Mechanical Engineering" },
-  { name: "Priya Sharma", role: "Vice President", department: "Civil Engineering" },
-  { name: "Sai Krishna", role: "General Secretary", department: "Electrical Engineering" },
-  { name: "Ananya Rao", role: "Treasurer", department: "Computer Science" },
+  { name: "Abhishek Kumar Singh", role: "President" },
+  { name: "Rushika Sree", role: "Vice President" },
+  { name: "Jaideep Raj Dutta", role: "General Secretary" },
+  { name: "Rohan Pagadala", role: "Treasurer" },
 ];
 
 const teams = {
   events: [
-    "Rahul Verma",
-    "Sneha Gupta",
-    "Vikram Singh",
-    "Meera Patel",
+    "Nipun Shukla",
+    "Sanju",
   ],
   technical: [
-    "Aditya Kumar",
-    "Kavitha Nair",
-    "Rohit Desai",
-    "Divya Reddy",
+    "Akshatha Gadasandula",
+    "Bhargav Kolluru",
+    "Srujan Nayak",
   ],
   mediaPR: [
-    "Nikhil Rao",
-    "Pooja Sharma",
-    "Karthik Iyer",
-    "Riya Menon",
+    "Deepika",
+    "Devi Prasad",
+    "Samiksha",
   ],
   design: [
-    "Varun Krishnan",
-    "Anjali Singh",
-    "Pranav Joshi",
-    "Ishita Das",
+    "Vishwesh",
+    "Sri Sugama",
+    "Sai Gayatri",
   ],
-  deputySecretary: ["Bharat Reddy"],
+  deputySecretary: ["Advaita Reddy"],
   seniorCoordinators: [
-    "Harsha Vardhan",
-    "Lakshmi Priya",
-    "Suresh Kumar",
-    "Nandini Rao",
-    "Vamsi Krishna",
-    "Shreya Iyer",
+    "Vedith Vanam",
+    "Varshini Kasani",
+    "Sushank",
   ],
 };
 
@@ -106,11 +98,8 @@ const Team = () => {
                 <h3 className="font-heading text-lg font-semibold text-foreground mb-1">
                   {member.name}
                 </h3>
-                <p className="text-primary font-medium text-sm mb-2">
+                <p className="text-primary font-medium text-sm">
                   {member.role}
-                </p>
-                <p className="text-muted-foreground text-xs">
-                  {member.department}
                 </p>
               </motion.div>
             ))}
@@ -167,7 +156,7 @@ const Team = () => {
               className="card-elevated p-6"
             >
               <h3 className="font-heading text-xl font-semibold text-foreground mb-4 pb-3 border-b border-border">
-                Technical Team
+                Project & Tech Team
               </h3>
               <ul className="space-y-2">
                 {teams.technical.map((name) => (
