@@ -2,12 +2,15 @@ import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import { User } from "lucide-react";
 import presidentImg from "@/assets/team/president.png";
+import vicePresidentImg from "@/assets/team/vice-president.jpg";
+import generalSecretaryImg from "@/assets/team/general-secretary.jpg";
+import treasurerImg from "@/assets/team/treasurer.jpg";
 
 const coreCommittee = [
   { name: "Abhishek Kumar Singh", role: "President", image: presidentImg },
-  { name: "Rushika Sree", role: "Vice President", image: null },
-  { name: "Jaideep Raj Dutta", role: "General Secretary", image: null },
-  { name: "Rohan Pagadala", role: "Treasurer", image: null },
+  { name: "Rushika Sree", role: "Vice President", image: vicePresidentImg },
+  { name: "Jaideep Raj Dutta", role: "General Secretary", image: generalSecretaryImg },
+  { name: "Rohan Pagadala", role: "Treasurer", image: treasurerImg },
 ];
 
 const teams = {
