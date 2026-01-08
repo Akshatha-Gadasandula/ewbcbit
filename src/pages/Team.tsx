@@ -130,7 +130,7 @@ const Team = () => {
             className="text-center mb-12 lg:mb-16"
           >
             <span className="inline-block text-primary font-medium text-sm uppercase tracking-widest mb-4">
-              Teams
+              Team Heads
             </span>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
               Our Members
