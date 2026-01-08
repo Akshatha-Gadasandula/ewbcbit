@@ -2,22 +2,24 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import { X } from "lucide-react";
-import heroImage from "@/assets/hero-ewb.jpg";
-import focusWater from "@/assets/focus-water.jpg";
-import focusEnergy from "@/assets/focus-energy.jpg";
-import focusInfrastructure from "@/assets/focus-infrastructure.jpg";
-import focusCommunity from "@/assets/focus-community.jpg";
+import celebration from "@/assets/gallery/celebration.png";
+import classroomOutreach from "@/assets/gallery/classroom-outreach.jpg";
+import schoolActivity from "@/assets/gallery/school-activity.png";
+import childrensAid from "@/assets/gallery/childrens-aid.png";
+import communityVisit from "@/assets/gallery/community-visit.png";
+import ashramVisit from "@/assets/gallery/ashram-visit.png";
+import schoolProgram from "@/assets/gallery/school-program.png";
+import teamPhoto from "@/assets/gallery/team-photo.png";
 
 const galleryImages = [
-  { src: heroImage, caption: "Community Water Project - Rangareddy", category: "Projects" },
-  { src: focusWater, caption: "Clean Water Initiative", category: "Water" },
-  { src: focusEnergy, caption: "Solar Panel Installation", category: "Energy" },
-  { src: focusInfrastructure, caption: "Bridge Construction", category: "Infrastructure" },
-  { src: focusCommunity, caption: "Community Development Workshop", category: "Education" },
-  { src: heroImage, caption: "Team Building Activity", category: "Events" },
-  { src: focusEnergy, caption: "Renewable Energy Project", category: "Energy" },
-  { src: focusWater, caption: "Hand Pump Installation", category: "Water" },
-  { src: focusCommunity, caption: "STEM Outreach Program", category: "Education" },
+  { src: celebration, caption: "EWB Celebration Event", category: "Events" },
+  { src: classroomOutreach, caption: "Classroom Outreach Program", category: "Education" },
+  { src: schoolActivity, caption: "School Activity Session", category: "Education" },
+  { src: childrensAid, caption: "Hyderabad Children's Aid Society", category: "Community" },
+  { src: communityVisit, caption: "Community Outreach Visit", category: "Community" },
+  { src: ashramVisit, caption: "Vaidehi Ashram Visit", category: "Community" },
+  { src: schoolProgram, caption: "Government School Program", category: "Education" },
+  { src: teamPhoto, caption: "Team Photo with Students", category: "Events" },
 ];
 
 const Gallery = () => {
