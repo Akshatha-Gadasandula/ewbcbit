@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import { User } from "lucide-react";
+import presidentImg from "@/assets/team/president.png";
 
 const coreCommittee = [
-  { name: "Abhishek Kumar Singh", role: "President" },
-  { name: "Rushika Sree", role: "Vice President" },
-  { name: "Jaideep Raj Dutta", role: "General Secretary" },
-  { name: "Rohan Pagadala", role: "Treasurer" },
+  { name: "Abhishek Kumar Singh", role: "President", image: presidentImg },
+  { name: "Rushika Sree", role: "Vice President", image: null },
+  { name: "Jaideep Raj Dutta", role: "General Secretary", image: null },
+  { name: "Rohan Pagadala", role: "Treasurer", image: null },
 ];
 
 const teams = {
@@ -92,8 +93,16 @@ const Team = () => {
                 className="card-elevated p-6 lg:p-8 text-center group"
               >
                 <div className="w-24 h-24 rounded-full bg-secondary flex items-center justify-center mx-auto mb-5
-                              group-hover:bg-primary/10 transition-colors duration-300">
-                  <User className="text-muted-foreground group-hover:text-primary transition-colors" size={40} />
+                              group-hover:bg-primary/10 transition-colors duration-300 overflow-hidden">
+                  {member.image ? (
+                    <img 
+                      src={member.image} 
+                      alt={member.name} 
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <User className="text-muted-foreground group-hover:text-primary transition-colors" size={40} />
+                  )}
                 </div>
                 <h3 className="font-heading text-lg font-semibold text-foreground mb-1">
                   {member.name}
