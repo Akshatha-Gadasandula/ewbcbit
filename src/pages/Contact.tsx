@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import JoinDialog from "@/components/JoinDialog";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -254,12 +255,14 @@ const Contact = () => {
                 <p className="text-primary-foreground/80 text-sm mb-4">
                   Join our chapter and be part of engineering change that matters.
                 </p>
-                <Button
-                  variant="secondary"
-                  className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
-                >
-                  Apply to Join
-                </Button>
+                <JoinDialog>
+                  <Button
+                    variant="secondary"
+                    className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
+                  >
+                    Apply to Join
+                  </Button>
+                </JoinDialog>
               </motion.div>
             </motion.div>
           </div>
