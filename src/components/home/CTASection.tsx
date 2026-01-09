@@ -2,6 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Heart } from "lucide-react";
+import JoinDialog from "@/components/JoinDialog";
 
 const CTASection = () => {
   const ref = useRef(null);
@@ -43,16 +44,17 @@ const CTASection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 
-                       bg-primary-foreground text-primary rounded-xl font-semibold
-                       hover:bg-primary-foreground/90 transition-all duration-300
-                       hover:shadow-elevated hover:-translate-y-0.5 group"
-            >
-              Join Our Chapter
-              <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
-            </Link>
+            <JoinDialog>
+              <button
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 
+                         bg-primary-foreground text-primary rounded-xl font-semibold
+                         hover:bg-primary-foreground/90 transition-all duration-300
+                         hover:shadow-elevated hover:-translate-y-0.5 group"
+              >
+                Join Our Chapter
+                <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+              </button>
+            </JoinDialog>
             <Link
               to="/projects"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 

@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-ewb.jpg";
+import JoinDialog from "@/components/JoinDialog";
 
 const Hero = () => {
   const scrollToContent = () => {
@@ -71,12 +72,11 @@ const Hero = () => {
               View Our Projects
               <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link
-              to="/contact"
-              className="btn-hero-outline inline-flex items-center justify-center"
-            >
-              Join EWB CBIT
-            </Link>
+            <JoinDialog>
+              <button className="btn-hero-outline inline-flex items-center justify-center">
+                Join EWB CBIT
+              </button>
+            </JoinDialog>
           </motion.div>
         </div>
       </div>

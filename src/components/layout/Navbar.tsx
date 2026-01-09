@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import ewbLogo from "@/assets/ewb-logo.png";
+import JoinDialog from "@/components/JoinDialog";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -66,12 +67,11 @@ const Navbar = () => {
                 )}
               </Link>
             ))}
-            <Link
-              to="/contact"
-              className="px-4 py-2 rounded-lg font-medium text-sm bg-primary text-white hover:bg-primary/90 transition-colors"
-            >
-              Join Us
-            </Link>
+            <JoinDialog>
+              <button className="px-4 py-2 rounded-lg font-medium text-sm bg-primary text-white hover:bg-primary/90 transition-colors">
+                Join Us
+              </button>
+            </JoinDialog>
           </div>
 
           {/* Mobile Menu Button */}
@@ -121,12 +121,11 @@ const Navbar = () => {
                   transition={{ delay: navLinks.length * 0.05 }}
                   className="pt-4"
                 >
-                  <Link
-                    to="/contact"
-                    className="block w-full py-3 px-4 bg-primary text-white rounded-lg font-medium text-center"
-                  >
-                    Join Us
-                  </Link>
+                  <JoinDialog>
+                    <button className="block w-full py-3 px-4 bg-primary text-white rounded-lg font-medium text-center">
+                      Join Us
+                    </button>
+                  </JoinDialog>
                 </motion.div>
               </div>
             </motion.div>
