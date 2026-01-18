@@ -14,16 +14,20 @@ import {
 } from "@/components/ui/carousel";
 
 // Import project images
-import focusWater from "@/assets/focus-water.jpg";
-import focusEnergy from "@/assets/focus-energy.jpg";
-import focusInfrastructure from "@/assets/focus-infrastructure.jpg";
-import focusCommunity from "@/assets/focus-community.jpg";
-import clothBag1 from "@/assets/projects/cloth-bag-1.jpg";
-import clothBag2 from "@/assets/projects/cloth-bag-2.jpg";
-import mathemagicians1 from "@/assets/projects/mathemagicians-1.jpg";
-import careerGuidance1 from "@/assets/projects/career-guidance-1.jpg";
-import keralaFlood1 from "@/assets/projects/kerala-flood-1.jpg";
-import aim2019 from "@/assets/projects/aim-2019.jpg";
+import rainwaterHarvesting from "@/assets/projects/rainwater-harvesting.jpg";
+import sewageTreatment from "@/assets/projects/sewage-treatment.jpg";
+import eLearningCenter from "@/assets/projects/e-learning-center.jpg";
+import solarElectrification from "@/assets/projects/solar-electrification.jpg";
+import bioCompost from "@/assets/projects/bio-compost.jpg";
+import paperRecycling from "@/assets/projects/paper-recycling.jpg";
+import careerGuidance from "@/assets/projects/career-guidance.jpg";
+import keralaRelief from "@/assets/projects/kerala-relief.jpg";
+import mathemagicians from "@/assets/projects/mathemagicians.jpg";
+import aimConference from "@/assets/projects/aim-conference.jpg";
+import sampurnaApp from "@/assets/projects/sampurna-app.jpg";
+import eAnkuram from "@/assets/projects/e-ankuram.jpg";
+import clothBags from "@/assets/projects/cloth-bags.jpg";
+import mathemagicians2019 from "@/assets/projects/mathemagicians-2019.jpg";
 
 const categories = ["All", "Engineering", "Education", "Community", "Environment"];
 
@@ -51,7 +55,7 @@ const projects: Project[] = [
     date: "24 Dec 2016",
     year: 2016,
     description: "Implemented rainwater harvesting systems to address water scarcity and promote sustainable water management in schools and community centers.",
-    images: [focusWater],
+    images: [rainwaterHarvesting],
     status: "Completed",
     impact: "Sustainable water source established",
     beneficiaries: "5+ Schools",
@@ -65,7 +69,7 @@ const projects: Project[] = [
     date: "05 Aug 2016",
     year: 2016,
     description: "Designed and implemented sewage water treatment solutions to improve sanitation and protect water resources in underserved communities.",
-    images: [focusWater, focusInfrastructure],
+    images: [sewageTreatment],
     status: "Completed",
     impact: "Clean water access improved",
     beneficiaries: "Local Community",
@@ -79,7 +83,7 @@ const projects: Project[] = [
     date: "25 Sep 2016",
     year: 2016,
     description: "Established e-learning centers in government schools to bridge the digital divide and provide quality education resources to students.",
-    images: [focusCommunity],
+    images: [eLearningCenter],
     status: "Completed",
     impact: "Digital education enabled",
     beneficiaries: "300+ Students",
@@ -93,7 +97,7 @@ const projects: Project[] = [
     date: "16 Jan 2017",
     year: 2017,
     description: "Deployed solar panels and battery systems in remote villages and schools, enabling evening classes, digital learning, and improved quality of life.",
-    images: [focusEnergy],
+    images: [solarElectrification],
     status: "Completed",
     impact: "Sustainable power for 10+ locations",
     beneficiaries: "Multiple Villages",
@@ -107,7 +111,7 @@ const projects: Project[] = [
     date: "29 Mar 2018",
     year: 2018,
     description: "Trained farmers and communities on bio-compost fertilizer production, promoting organic farming and reducing chemical dependency.",
-    images: [focusCommunity],
+    images: [bioCompost],
     status: "Completed",
     impact: "Organic farming promoted",
     beneficiaries: "Local Farmers",
@@ -121,7 +125,7 @@ const projects: Project[] = [
     date: "03 May 2018",
     year: 2018,
     description: "Launched paper recycling initiative to reduce waste and promote environmental consciousness among students and communities.",
-    images: [focusCommunity],
+    images: [paperRecycling],
     status: "Completed",
     impact: "Waste reduction achieved",
     beneficiaries: "Campus Community",
@@ -135,7 +139,7 @@ const projects: Project[] = [
     date: "18 Aug 2018",
     year: 2018,
     description: "Conducted career guidance sessions for higher secondary students in government schools across Kismatpur, Manikonda, Hydershakote, and Khanapur.",
-    images: [careerGuidance1, focusCommunity],
+    images: [careerGuidance],
     status: "Completed",
     impact: "Career awareness created",
     beneficiaries: "200+ Students",
@@ -149,7 +153,7 @@ const projects: Project[] = [
     date: "20-21 Aug 2018",
     year: 2018,
     description: "Organized flood donation camp collecting clothes, preservable foods, footwear, and monetary donations for Kerala flood victims affected by the devastating 2018 floods.",
-    images: [keralaFlood1],
+    images: [keralaRelief],
     status: "Completed",
     impact: "Relief materials delivered",
     beneficiaries: "Flood Victims",
@@ -163,7 +167,7 @@ const projects: Project[] = [
     date: "22 Dec 2018",
     year: 2018,
     description: "Celebrated National Mathematics Day with quiz competitions and fun rounds for students from classes 6-10 in government schools. Prizes distributed to winners.",
-    images: [mathemagicians1, focusCommunity],
+    images: [mathemagicians],
     status: "Completed",
     impact: "Math awareness promoted",
     beneficiaries: "200+ Students",
@@ -177,7 +181,7 @@ const projects: Project[] = [
     date: "14-15 Dec 2018",
     year: 2018,
     description: "Team of 33 EWBians participated in the 7th All India Chapters Meet. Presented 'Solar Insect Trapper' project to EWB-India leadership.",
-    images: [aim2019],
+    images: [aimConference],
     status: "Completed",
     impact: "National recognition achieved",
     beneficiaries: "EWB Network",
@@ -191,7 +195,7 @@ const projects: Project[] = [
     date: "27 Dec 2018",
     year: 2018,
     description: "Developed and deployed educational mobile application to provide digital learning resources to students in rural areas.",
-    images: [focusCommunity],
+    images: [sampurnaApp],
     status: "Completed",
     impact: "Digital learning enabled",
     beneficiaries: "Rural Students",
@@ -205,7 +209,7 @@ const projects: Project[] = [
     date: "29 Dec 2018 - 5 Jan 2019",
     year: 2019,
     description: "Associated with EWB Hyderabad Professional Chapter to conduct e-Ankuram, a learning through digitalization program organized by EWB-India.",
-    images: [focusCommunity],
+    images: [eAnkuram],
     status: "Completed",
     impact: "Digital literacy improved",
     beneficiaries: "Students & Teachers",
@@ -219,7 +223,7 @@ const projects: Project[] = [
     date: "18-19 Dec 2019",
     year: 2019,
     description: "Collaborated with Nirman Organization to collect old clothes and convert them into eco-friendly bags. Distributed 150+ bags to staff, students, and lab technicians.",
-    images: [clothBag1, clothBag2],
+    images: [clothBags],
     status: "Completed",
     impact: "150+ plastic bags replaced",
     beneficiaries: "Campus Community",
@@ -233,7 +237,7 @@ const projects: Project[] = [
     date: "22 Dec 2019",
     year: 2019,
     description: "Conducted quiz, elocution, and essay writing competitions for 6th to 9th class students across 8 government schools on National Mathematics Day.",
-    images: [mathemagicians1, focusCommunity],
+    images: [mathemagicians2019],
     status: "Completed",
     impact: "250+ students participated",
     beneficiaries: "250+ Students",
