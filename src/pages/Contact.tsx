@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import Layout from "@/components/layout/Layout";
 import { MapPin, Mail, Phone, Send, Instagram, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -7,6 +8,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import JoinDialog from "@/components/JoinDialog";
+
+// EmailJS Configuration
+const EMAILJS_SERVICE_ID = "service_3odjz4v";
+const EMAILJS_TEMPLATE_ID = "template_wo6q6ni";
+const EMAILJS_PUBLIC_KEY = "7QsHPkPoLupdPE7y0";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -18,19 +24,38 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        EMAILJS_PUBLIC_KEY
+      );
+      
       toast({
         title: "Message Sent!",
         description: "Thank you for reaching out. We'll get back to you soon.",
       });
       setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      toast({
+        title: "Failed to send message",
+        description: "Please try again or contact us directly via email.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
