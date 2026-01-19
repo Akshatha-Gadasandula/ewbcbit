@@ -10,7 +10,7 @@ import { useToast } from "@/hooks/use-toast";
 import JoinDialog from "@/components/JoinDialog";
 
 // EmailJS Configuration
-const EMAILJS_SERVICE_ID = "service_3odjz4v";
+const EMAILJS_SERVICE_ID = "service_bwq28r3";
 const EMAILJS_TEMPLATE_ID = "template_wo6q6ni";
 const EMAILJS_PUBLIC_KEY = "7QsHPkPoLupdPE7y0";
 
